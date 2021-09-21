@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Gallery</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-color: #333;
+            color: #EAEAEA;
+        }
+
+        #gallery {
+            position: relative;
+        }
+
+        figure {
+            position: absolute;
+            left: 280px;
+            text-align: center;
+            opacity: .25;
+        }
+
+        #gallery ul {
+            width: 300px;
+            list-style-type: none;
+        }
+
+        #gallery li {
+            display: inline;
+            float: left;
+            padding: 10px;
+        }
+
+        #gallery img {
+            border: none;
+        }
+
+        #gallery a {
+            text-decoration: none;
+            color: #EAEAEA;
+            font-style: italic;
+        }
+
+        /*
+        Configure span elements within
+        the #gallery. Set position to
+        absolute, left to -1000px (which
+        causes them not to display initially
+        in the browser viewport), and
+        opacity to 0. Also configure a three
+        second ease-in-out transition.
+         */
+        #gallery span {
+            position: absolute;
+            left: -1000px;
+            opacity: 0;
+            transition: opacity 3s ease-in-out;
+        }
+
+        /*
+        Configure the span elements
+        within the #gallery to display when
+        the web visitor hovers the mouse
+        over the thumbnail image link. Set
+        position to absolute, top to 15px,
+        left to 320px, centered text, and
+        opacity to 1.
+         */
+        #gallery a:hover span {
+            position: absolute;
+            top: 15px;
+            left: 320px;
+            text-align: center;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div id="gallery">
+        <figure>
+            <img src="gallery/photo1.jpg" alt="">
+        </figure>
+        <ul>
+            <li>
+                <a href="gallery/photo1.jpg">
+                    <img src="gallery/thumb1.jpg" height="75" width="100" alt="bridge"/>
+                    <span>
+                        <img src="gallery/photo1.jpg" height="300" width="400" alt="bridge"/>
+                        <br>
+                        A Bridge
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery/photo2.jpg">
+                    <img src="gallery/thumb2.jpg" height="75" width="100" alt="beach"/>
+                    <span>
+                        <img src="gallery/photo2.jpg" height="300" width="400" alt="beach"/>
+                        <br>
+                        A Beach
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery/photo3.jpg">
+                    <img src="gallery/thumb3.jpg" height="75" width="100" alt="bay"/>
+                    <span>
+                        <img src="gallery/photo3.jpg" height="300" width="400" alt="bay"/>
+                        <br>
+                        A Bay
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery/photo4.jpg">
+                    <img src="gallery/thumb4.jpg" height="75" width="100" alt="peninsula"/>
+                    <span>
+                        <img src="gallery/photo4.jpg" height="300" width="400" alt="peninsula"/>
+                        <br>
+                        A Peninsula
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery/photo5.jpg">
+                    <img src="gallery/thumb5.jpg" height="75" width="100" alt="cliffs"/>
+                    <span>
+                        <img src="gallery/photo5.jpg" height="300" width="400" alt="cliffs"/>
+                        <br>
+                        Some Cliffs
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery/photo6.jpg">
+                    <img src="gallery/thumb6.jpg" height="75" width="100" alt="sunset"/>
+                    <span>
+                        <img src="gallery/photo1.jpg" height="300" width="400" alt="sunset"/>
+                        <br>
+                        A Sunset
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
